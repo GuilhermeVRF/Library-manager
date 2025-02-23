@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './unloggedHeader.module.css';
+import style from './Header.module.css';
 
 function Header() {
 

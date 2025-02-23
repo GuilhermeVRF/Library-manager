@@ -3,8 +3,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-    background-color: #00569d;    
+    background-color: #003092;    
     box-shadow: 0px 0px 10px black;
     color: white;
     padding-left: 20px;
+    position: absolute;
+    width: 100%;
 }
