@@ -1,7 +1,7 @@
 import Input from "../../../components/input/input";
-import style from './register.module.css';
+import style from './register-book.module.css';
 
-function Register() {
+function RegisterBook() {
   return (
     <div className={style.container_register}>
       <h1 className={style.title}>Cadastro de Livro</h1>
@@ -24,9 +24,9 @@ function Register() {
         <div className="input_group">
           <label htmlFor="condition" className="label">Estado de Conservação:</label>
           <select id="condition" className="input">
-            <option value="novo">Novo</option>
-            <option value="usado">Usado</option>
-            <option value="danificado">Danificado</option>
+            <option value="GOOD">Novo</option>
+            <option value="REGULAR">Usado</option>
+            <option value="BAD">Danificado</option>
           </select>
         </div>
         
@@ -36,4 +36,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default RegisterBook;

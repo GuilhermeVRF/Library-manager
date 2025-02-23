@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Register from "../pages/account/register/register";
 import Account from "../pages/account/account";
 import Login from "../pages/account/login/login";
+import RegisterBook from "../pages/book/register/register-book";
+import Book from "../pages/book/book";
 
 export default function RoutesControll() {
   return (
@@ -11,7 +13,9 @@ export default function RoutesControll() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
         </Route>
-       
+        <Route path="book" element={<Book/>}>
+          <Route path="store" element={<RegisterBook />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
