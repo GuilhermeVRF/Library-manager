@@ -3,3 +3,33 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.btn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-sucess{
+    border: solid 1px green;
+    background-color: green;
+    color: white;
+}
+
+.btn-sucess:hover{
+    transition: 0.5s;
+    background-color: white;
+    color: green;
+}
+
+.btn-danger{
+    background-color: red;
+    color: white;
+}
+
+.btn-danger:hover{
+    transition: 0.5s;
+    background-color: white;
+    color: red;
+}
