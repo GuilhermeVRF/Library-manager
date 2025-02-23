@@ -5,7 +5,7 @@ function Header() {
 
     return (
         <header className={style.header}>
-            <h1>Library Manager</h1>
+            <h1>Bookly</h1>
         </header>
     );
 };
