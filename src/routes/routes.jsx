@@ -9,6 +9,7 @@ export default function RoutesControll() {
         <Route path="" element={<Account />}>
           <Route path="/register" element={<Register />} />
         </Route>
+       
       </Routes>
     </BrowserRouter>
   );
