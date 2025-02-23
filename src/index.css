@@ -1,35 +1,58 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.btn{
-    padding: 10px 20px;
+.btn {
+    color: white;
+    padding: 12px;
+    width: 70%;
+    font-size: 16px;
+    font-weight: 700;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
 }
 
-.btn-sucess{
-    border: solid 1px green;
-    background-color: green;
+.btn_success {
+    border: solid 1px #003092;
+    background-color: #003092;
     color: white;
-}
-
-.btn-sucess:hover{
     transition: 0.5s;
-    background-color: white;
-    color: green;
 }
 
-.btn-danger{
+.btn_success:hover {
+
+    background-color: white;
+    color: #003092;
+}
+
+.btn_danger {
     background-color: red;
     color: white;
 }
 
-.btn-danger:hover{
+.btn_danger:hover {
     transition: 0.5s;
     background-color: white;
     color: red;
+}
+
+.input_group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+body {
+    height: 100vh;
+}
+
+
+.label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
 }

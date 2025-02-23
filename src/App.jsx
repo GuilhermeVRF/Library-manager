@@ -1,11 +1,9 @@
-import Header from './components/unloggedHeader/unloggedHeader'
-import Register from './pages/account/register/register'
+import RoutesControll from './routes/routes';
 
 function App() {
   return (
     <>
-      <Header/>
-      <Register/>
+      <RoutesControll/>
     </>
   )
 }
