@@ -1,5 +1,6 @@
 import Input from "../../../components/input/input";
 import style from './register.module.css';
+import { Link } from 'react-router-dom';
 
 function Register() {
   return (
@@ -23,6 +24,9 @@ function Register() {
         
         <button type="submit" className="btn btn_success">Registrar</button>
       </form>
+      <p>
+        Possui uma conta? <Link to="/login">Realizar Login</Link>
+      </p>
     </div>
   );
 }
