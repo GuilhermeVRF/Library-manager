@@ -19,5 +19,23 @@
 
       }
  
-
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        background-color: #fff;
+        cursor: pointer;
+      }
+      
+      select:focus {
+        border-color: #F4F6FF;
+        outline: none;
+      }
+      
+      select option {
+        padding: 10px;
+      }
+     
 }
