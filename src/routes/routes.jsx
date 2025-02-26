@@ -5,6 +5,7 @@ import Login from "../pages/account/login/login";
 import RegisterBook from "../pages/book/register/register-book";
 import Book from "../pages/book/book";
 import ListBooks from "../pages/book/list/ListBooks";
+import Home from "../pages/home/home";
 
 export default function RoutesControll() {
   return (
@@ -18,6 +19,7 @@ export default function RoutesControll() {
           <Route path="store" element={<RegisterBook />} />
           <Route path="list" element={<ListBooks />} />
         </Route>
+         <Route path="home" element={<Home/>} />
       </Routes>
     </BrowserRouter>
   );
