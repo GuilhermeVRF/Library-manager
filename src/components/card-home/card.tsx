@@ -1,6 +1,5 @@
 import React from "react";
 import style from "./card.module.css";
-import PopUp from "../pop-up/popUp";
 
 function Card() {
   return (
@@ -13,7 +12,7 @@ function Card() {
         <i className="fa-solid fa-book fa-xl"></i>
       </div>
 
-      <PopUp/>
+      <button>TROCAR</button>
     </div>
   );
 }
