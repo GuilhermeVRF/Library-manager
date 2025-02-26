@@ -1,7 +1,7 @@
-import { Outlet } from "react-router-dom";
+
 import Header from "../../components/header/Header";
 import style from './home.module.css';
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "../../components/card-home/card";
 
 export default function Home() {
@@ -40,6 +40,7 @@ export default function Home() {
         <h1>TROCA DE LIVROS</h1>
         <div className={style.container_card}>
         {books.map((book) => (
+            // eslint-disable-next-line react/jsx-key
             <Card 
               bookId={book.id}
               bookTitle={book.title}

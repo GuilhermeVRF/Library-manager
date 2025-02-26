@@ -1,0 +1,25 @@
+.modal {
+   font-size: 12px;
+   border-radius: 12px;
+   width: 37rem;
+   background-color: white;
+
+   .header {
+      width: 100%;
+      font-size: 18px;
+      margin-bottom: 1rem;
+      position: relative;
+   }
+
+   h3 {
+      padding: 2rem 2rem 0 2rem;
+      text-transform: uppercase;
+      text-align: start;
+   }
+
+   .content {
+      width: 100%;
+      padding: 1rem 2rem 2rem 2rem;
+      font-size: 14px;
+   }
+}

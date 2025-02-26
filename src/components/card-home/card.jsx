@@ -1,7 +1,7 @@
-import React from "react";
 import style from "./card.module.css";
+import PopupModal from "../pop-up/PopupModal";
 
-function Card({bookId, bookTitle, bookOwnerName, bookIsAvaiable, bookConservationStatus, bookEdition, bookOwnerId}) {
+function Card({bookId, bookTitle, bookOwnerName, bookConservationStatus, bookEdition, bookOwnerId}) {
   // Função para traduzir o status de conservação
   const translateConservationStatus = (status) => {
     switch (status.toLowerCase()) {
@@ -28,7 +28,7 @@ function Card({bookId, bookTitle, bookOwnerName, bookIsAvaiable, bookConservatio
         <i className="fa-solid fa-book fa-xl"></i>
       </div>
 
-      <button required={bookIsAvaiable}>TROCAR</button>
+      <PopupModal />
     </div>
   );
 }
