@@ -1,7 +1,35 @@
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './listBooks.module.css';
 
 function ListBooks() {
+    const [books, setBooks] = useState([]);
+
+    useEffect(() => {
+        // Função assíncrona para buscar os livros da API
+        const fetchBooks = async () => {
+            try {
+                // Fazendo a requisição para a API
+                const response = await fetch(`http://localhost:8080/library/book/${sessionStorage.getItem('userId')}`);
+
+                if (!response.ok) {
+                    throw new Error("Erro ao buscar os livros");
+                }
+
+                // Converte a resposta para JSON
+                const data = await response.json();
+
+                // Atualiza o estado com os dados recebidos
+                setBooks(data);
+            } catch (error) {
+                console.error("Erro:", error);
+                alert("Erro ao carregar os livros. Tente novamente mais tarde.");
+            }
+        };
+
+        // Chama a função para buscar os livros
+        fetchBooks();
+    }, []);
+
     // Função para traduzir o status de conservação
     const translateConservationStatus = (status) => {
         switch (status.toLowerCase()) {
@@ -15,13 +43,6 @@ function ListBooks() {
                 return 'Desconhecido';
         }
     };
-
-    // Estado inicial dos livros
-    const [books, setBooks] = useState([
-        { id: 1, title: 'O Senhor dos Anéis', author: 'J.R.R. Tolkien', edition: '1', conservationStatus: 'good' },
-        { id: 2, title: '1984', author: 'George Orwell', edition: '2', conservationStatus: 'regular' },
-        { id: 3, title: 'Dom Quixote', author: 'Miguel de Cervantes', edition: '1', conservationStatus: 'bad' },
-    ]);
 
     return (
         <div className={style.container_books}>
