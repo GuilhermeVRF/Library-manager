@@ -6,16 +6,21 @@
     padding: .8rem;
     font-size: .875rem;
     background-color: #F4F6FF;
+    border: 1px solid transparent;
 
     input {
         width: 100%;
         background-color: transparent;
         font-weight: 400;
         color: #000;
-        border: 0;
+        border: 1px solid transparent;
     }
 
 }
+.input_body:focus-within {
+    border: 1px solid #d1d8f7;
+}
+
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

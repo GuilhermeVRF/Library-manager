@@ -9,16 +9,35 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 300px;
     gap: 1rem;
+
+    button {
+        padding: 10px; 
+        background-color: #003092;
+        border: solid 1px transparent;
+        width: 80%;
+        font-weight: 700;
+        color: white;
+        border-radius: 18px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    
+    button:hover {
+        background-color: white;
+        color: #003092;
+        border: solid 1px #003092;
+    }
 }
 
 .same_place {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
     width: 100%;
     
     i{
         color: #003092;
+        padding: .8rem 0 0 .5rem;
     }
     .card_text {
         display: flex;
@@ -36,24 +55,8 @@
             color: #666;
         }
     }
+
+   
 }
 
 
-button {
-    padding: 10px; 
-    background-color: #003092;
-    border: solid 1px transparent;
-    width: 80%;
-    font-weight: 700;
-    color: white;
-    border: none;
-    border-radius: 18px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-button:hover {
-    background-color: white;
-    color: #003092;
-    border: solid 1px #003092;
-}

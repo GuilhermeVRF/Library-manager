@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import style from './listBooks.module.css';
+import PopupReview from '../../../components/pop-up-review/PopupReview';
 
 function ListBooks() {
     const [books, setBooks] = useState([]);
@@ -76,7 +77,7 @@ function ListBooks() {
                         <th>Edição</th>
                         <th>Estado de conservação</th>
                         <th>Status</th>
-                        
+                        <th>Review</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -96,6 +97,7 @@ function ListBooks() {
                                     </button>
                                 )}
                             </td>
+                            <td><PopupReview/></td>
                         </tr>
                     ))}
                 </tbody>

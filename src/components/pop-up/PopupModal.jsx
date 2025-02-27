@@ -96,7 +96,7 @@ const PopupModal = ({ bookOwnerId, bookId, bookOwnerName, bookTitle }) => {
           ))}
         </div>
 
-        <button onClick={() => createExchange()} className={style.confirmExchangeBtn}>
+        <button onClick={() => createExchange()} className='btn btn_success'>
           Confirmar Troca
         </button>
 

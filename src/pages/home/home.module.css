@@ -8,12 +8,37 @@ section.home_section {
 
    h1 {
       margin-top: 10rem;
+      font-size: 38px;
    }
 
-   .container_card {
+   .card_container {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+   }
+
+   .card {
+      background: #f4f4f4;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 16px;
-      padding: 16px;
+      align-items: center;
+      color: #003092;
+      font-weight: 400;
+      font-size: 28px;
+      transition: 0.3s;
+      width: 18rem;
+      height: 10rem;
+   }
+   
+   .card:hover {
+      background: #d1d8f7;
    }
 }
+
+
+
+
