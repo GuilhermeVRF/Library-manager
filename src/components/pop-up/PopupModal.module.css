@@ -18,8 +18,32 @@
    }
 
    .content {
+      display: flex;
+      flex-direction: column;
       width: 100%;
       padding: 1rem 2rem 2rem 2rem;
       font-size: 14px;
+      gap: 20px;
    }
+}
+
+.exchangeMessage{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+.confirmExchangeBtn{
+   width: 100%;
+}
+
+.reviews{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   gap: 20px;
+}
+
+.review{
+   border-bottom: solid 1px #CCC;
 }

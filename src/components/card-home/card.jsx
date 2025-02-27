@@ -28,7 +28,7 @@ function Card({bookId, bookTitle, bookOwnerName, bookConservationStatus, bookEdi
         <i className="fa-solid fa-book fa-xl"></i>
       </div>
 
-      <PopupModal />
+      <PopupModal bookOwnerId={bookOwnerId} bookId={bookId} bookOwnerName={bookOwnerName} bookTitle={bookTitle}/>
     </div>
   );
 }
