@@ -7,6 +7,7 @@ import Book from "../pages/book/book";
 import ListBooks from "../pages/book/list/ListBooks";
 import Home from "../pages/home/home";
 import Replace from "../pages/book/replacement/replacement";
+import ProtectedRoute from "../components/protected-route/ProtectedRoute";
 
 export default function RoutesControll() {
   return (
@@ -17,13 +18,14 @@ export default function RoutesControll() {
           <Route path="/login" element={<Login />} />
           <Route index element={<Navigate to="/login" />} />
         </Route>
-        <Route path="book" element={<Book/>}>
-          <Route path="store" element={<RegisterBook />} />
-          <Route path="list" element={<ListBooks />} />
-          <Route path="replacement" element={<Replace />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="book" element={<Book/>}>
+            <Route path="store" element={<RegisterBook />} />
+            <Route path="list" element={<ListBooks />} />
+            <Route path="replacement" element={<Replace />} />
+          </Route>
+          <Route path="home" element={<Home/>} />
         </Route>
-        <Route path="home" element={<Home/>} />
-      
       </Routes>
     </BrowserRouter>
   );
