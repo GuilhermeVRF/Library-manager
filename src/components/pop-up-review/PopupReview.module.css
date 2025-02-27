@@ -1,0 +1,89 @@
+.button {
+   border: 0;
+   background-color: transparent;
+   cursor: pointer;
+
+   i {
+      color: #555;
+      transition: .3s;
+   }
+
+   i:hover {
+      color: #003092;
+   }
+}
+
+
+.modal {
+   font-size: 12px;
+   border-radius: 12px;
+   padding: 2rem;
+   width: 37rem;
+   background-color: white;
+   
+   button{
+      margin-top: 15px;
+      width: 30%;
+      padding: 10px;
+   }
+   .header {
+      width: 100%;
+      font-size: 18px;
+      margin-bottom: 1rem;
+      position: relative;
+   }
+
+   h3 {
+      text-transform: uppercase;
+      text-align: start;
+   }
+
+   .content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      font-size: 14px;
+      gap: 1rem;
+
+      textarea {
+         background-color: #F4F6FF;
+         border: 1px solid transparent;
+         border: 0;
+         width: 100%;
+         height: 10vh;
+         border-radius: 6px;
+         padding: .8rem;
+         font-size: .875rem;
+         resize: none;
+      }
+
+      textarea:focus {
+         border: 1px solid #d1d8f7;
+         box-shadow: none;
+         outline: none;
+      }
+
+      
+   }
+}
+
+.exchangeMessage {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+.confirmExchangeBtn {
+   width: 100%;
+}
+
+.reviews {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   gap: 20px;
+}
+
+.review {
+   border-bottom: solid 1px #CCC;
+}
