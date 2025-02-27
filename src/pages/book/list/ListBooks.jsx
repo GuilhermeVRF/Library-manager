@@ -97,7 +97,9 @@ function ListBooks() {
                                     </button>
                                 )}
                             </td>
-                            <td><PopupReview/></td>
+                            <td>
+                                <PopupReview bookId={book.id}/>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
