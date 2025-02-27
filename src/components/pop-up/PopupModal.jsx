@@ -91,7 +91,7 @@ const PopupModal = ({ bookOwnerId, bookId, bookOwnerName, bookTitle }) => {
         <div className={style.reviews}>
           {reviews.map((review) => (
             <div key={review.id} className={style.review}>
-              <p>{review.author} : {review.text}</p>
+              <p>{review.author.name} : {review.text}</p>
             </div>
           ))}
         </div>
