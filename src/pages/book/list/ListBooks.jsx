@@ -17,7 +17,7 @@ function ListBooks() {
 
                 // Converte a resposta para JSON
                 const data = await response.json();
-
+                
                 // Atualiza o estado com os dados recebidos
                 setBooks(data);
             } catch (error) {
@@ -28,7 +28,9 @@ function ListBooks() {
 
         // Chama a função para buscar os livros
         fetchBooks();
+        
     }, []);
+
 
     // Função para traduzir o status de conservação
     const translateConservationStatus = (status) => {
@@ -44,6 +46,25 @@ function ListBooks() {
         }
     };
 
+    // Função para fazer uma requisição AJAX para a rota específica do livro
+    const changeBookStatus = async (bookId) => {
+        try {
+            const response = await fetch(`http://localhost:8080/library/book/status/${bookId}`, {
+                method: 'POST'
+            });
+
+            if (!response.ok) {
+                throw new Error("Erro ao buscar detalhes do livro");
+            }
+
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error("Erro:", error);
+            alert("Erro ao atualizar o status do livro. Tente novamente mais tarde.");
+        }
+    };
+
     return (
         <div className={style.container_books}>
             <h1>Livros</h1>
@@ -54,15 +75,27 @@ function ListBooks() {
                         <th>Autor</th>
                         <th>Edição</th>
                         <th>Estado de conservação</th>
+                        <th>Status</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
                     {books.map((book) => (
+                        
                         <tr key={book.id}>
                             <td>{book.title}</td>
                             <td>{book.author}</td>
                             <td>{book.edition}</td>
                             <td>{translateConservationStatus(book.conservationStatus)}</td>
+                            <td>
+                                {book.isAvailable ? (
+                                    <span>&#10003;</span> // Check mark
+                                ) : (
+                                    <button onClick={() => changeBookStatus(book.id)}>
+                                        Ativar
+                                    </button>
+                                )}
+                            </td>
                         </tr>
                     ))}
                 </tbody>
